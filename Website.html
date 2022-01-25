@@ -4,25 +4,33 @@
     <link rel="stylesheet" href="teststyle.css">
 </head>
 <script>
-  var i = 0;
-  var images = [];
-  var time = 3000;
+var i = 0;
+var images = [];
 
-  images[0] = 'images_test/colortest.png';
-  images[1] = 'images_test/colortest2.png';
-  images[2] = 'images_test/colortest3.png';
+images[0] = 'images_test/colortest.png';
+images[1] = 'images_test/colortest2.png';
+images[2] = 'images_test/colortest3.png';
 
-  function changeImg(){
-    document.slide.src = images[i]
-
-    if(i < images.length - 1){
-      i++;
-    }else{
-      i = 0;
+var nextImg = function () {
+    if (i < images.length) {
+            i++;      
     }
-    setTimeout("changeImg()", time);
-  }
-  window.onload = changeImg;
+    else {
+        i=0;    
+    }
+    document.getElementById("slide").src = images[i];   
+}
+
+var prevImg = function(){
+    if (i > 0){
+      i--;
+}else{
+  i = images.length -1;
+}
+    document.getElementById("slide").src = images[i];
+}
+nextImg();
+prevImg();
 
 </script>
 <body>
@@ -32,22 +40,24 @@
         <li><a href="#toe" onClick="document.getElementById('toekomst_part').scrollIntoView();">Toekomst</a></li>
         <li><a href="#cont" onClick="document.getElementById('contact_part').scrollIntoView();">Contact</a></li>
       </ul>
-      <!--Please leave everything above this line alone, dont touch it unless you know what youre doing-->
 
-<div class="font"> <!--change the white text to your own, use <br><br> to make a clear line between two sentenses-->
-    <!--if needed, change the value of "margin-top/bottom/left/right:" to something else to move the box. Example: "margin-top:250px;" moves the box 250 pixels down-->
+<div class="font">
     <img class="img_bord grow box-pos" src="images_test/colortest.png" style="margin-left:400px;width:225px;height:250px;">
     <div class="grounded-radiants grow box-pos" style="margin-left:800px;margin-top:-270px;">Hallo, Mijn Naam is aaaa<br><br>Ik kom uit aaaa<br><br>en ik ben aaaa jaar oud</div>
     <div class="grounded-radiants grow box-pos" style="margin-left:800px;margin-bottom:-300px;">Ik doe de opleiding aaaa<br><br></div>
     <div class="grounded-radiants grow box-pos" style="margin-left:500px;margin-top:400px;">Deze portfolio is gemaakt als samenwerking met <br>naam, naam, naam en naam<br><br></div>
-    <div class="grounded-radiants grow" style="margin-left:100px">This is a test for text boxes<br><br><br><br></div>
-    <!--<button class="grounded-radiants grow" onClick="document.getElementById('intro_part').scrollIntoView();">Back to top</button>-->
+    <div class="grounded-radiants grow" style="margin-left:100px">Put introduction here and tell a bit about yourself or smth<br><br>dont forget to change this after<br>lol<br></div>
     <div id="contact_part" class="grounded-radiants grow" style="margin-left:100px">Contact Me!<br><br>E-Mail: thisisatest@gmail.com<br><br>Tele: +06 1234567890</div>
 </div>
+<button class="button font grow" onClick="document.getElementById('intro_part').scrollIntoView();">Back to top</button>
+<button class="taskbar font grow" onClick="document.getElementById('intro_part').scrollIntoView();">Back to top</button>
 
 <div class="img_bord grow">
-  <img name="slide" width="200px" height="200px">
+  <img id= "slide" src="images_test/colortest.png" width="200px" height="200px">
 </div>
+
+<a onClick="prevImg" class="slidebutton font" id="prevImg">&#10094;</a>
+<a onClick="nextImg" class="slidebutton font" id="nextImg">&#10095;</a>
 
 <div class="font">
   <div class= "taskbar grow" style="margin-left:500px;">testaaaaaaa<br><br>asdasdasdsd</div>
