@@ -5,32 +5,25 @@
 </head>
 <script>
 var i = 0;
-var images = [];
+var images = ['images_test/colortest.png', 'images_test/colortest2.png','images_test/colortest3.png','images_test/colortest.png'];
 
-images[0] = 'images_test/colortest.png';
-images[1] = 'images_test/colortest2.png';
-images[2] = 'images_test/colortest3.png';
-
-var nextImg = function () {
-    if (i < images.length) {
-            i++;      
-    }
-    else {
-        i=0;    
-    }
-    document.getElementById("slide").src = images[i];   
-}
-
-var prevImg = function(){
-    if (i > 0){
-      i--;
-}else{
-  i = images.length -1;
-}
+document.addEventListener("click", function(event) { 
+  if (i >= images.length - 1){
+      i = 0;
+  }
+   if (i < 0){
+      i = images.length - 1;
+   }
+  if(event.target.id == "changeImg(-1)"){
+    i++;
     document.getElementById("slide").src = images[i];
-}
-nextImg();
-prevImg();
+    
+  }
+  if(event.target.id == "changeImg(1)"){
+    i++
+    document.getElementById("slide").src = images[i];
+  }
+} ) 
 
 </script>
 <body>
@@ -42,26 +35,30 @@ prevImg();
       </ul>
 
 <div class="font">
-    <img class="img_bord grow box-pos" src="images_test/colortest.png" style="margin-left:400px;width:225px;height:250px;">
+    <img class="img_bord grow box-pos" src="images_test/photo.png" style="margin-left:400px;width:225px;height:250px;">
     <div class="grounded-radiants grow box-pos" style="margin-left:800px;margin-top:-270px;">Hallo, Mijn Naam is aaaa<br><br>Ik kom uit aaaa<br><br>en ik ben aaaa jaar oud</div>
     <div class="grounded-radiants grow box-pos" style="margin-left:800px;margin-bottom:-300px;">Ik doe de opleiding aaaa<br><br></div>
-    <div class="grounded-radiants grow box-pos" style="margin-left:500px;margin-top:400px;">Deze portfolio is gemaakt als samenwerking met <br>naam, naam, naam en naam<br><br></div>
-    <div class="grounded-radiants grow" style="margin-left:100px">Put introduction here and tell a bit about yourself or smth<br><br>dont forget to change this after<br>lol<br></div>
-    <div id="contact_part" class="grounded-radiants grow" style="margin-left:100px">Contact Me!<br><br>E-Mail: thisisatest@gmail.com<br><br>Tele: +06 1234567890</div>
-</div>
-<button class="button font grow" onClick="document.getElementById('intro_part').scrollIntoView();">Back to top</button>
-<button class="taskbar font grow" onClick="document.getElementById('intro_part').scrollIntoView();">Back to top</button>
-
-<div class="img_bord grow">
-  <img id= "slide" src="images_test/colortest.png" width="200px" height="200px">
+    <div class="grounded-radiants grow box-pos" style="margin-left:400px;margin-top:400px;">Geef een introductie over jezelf (naam, hobby, school, opleiding)<br>gebruik &#10094;br&#10095; in de code voor <br>ruimte tussen de lijnen<br></div>
+   <!-- <div id="contact_part" class="grounded-radiants grow" style="margin-left:100px">Contact Me!<br><br>E-Mail: thisisatest@gmail.com<br><br>Tele: +06 1234567890</div>-->
 </div>
 
-<a onClick="prevImg" class="slidebutton font" id="prevImg">&#10094;</a>
-<a onClick="nextImg" class="slidebutton font" id="nextImg">&#10095;</a>
-
-<div class="font">
-  <div class= "taskbar grow" style="margin-left:500px;">testaaaaaaa<br><br>asdasdasdsd</div>
+<div class="img_bord grow slidepos">
+  <img id= "slide" class="slides" src="images_test/colortest.png" width="200px" height="200px">
 </div>
-  <img src="images_test/background.png" alt="bg_image" class="aaa">
+
+<div class="grounded-radiants grow box-pos" id="erv_part" style="margin-left:600px;margin-top:-435px;font-family: Verdana;font-size:30px;">.  Ervaringen  .</div>
+<div class="grounded-radiants grow box-pos font" style="margin-left:800px;">ik kan werken met asdohfghfgf<br><br>asdasdasdasdasdasdasd<br>adsfsdd</div>
+<div class="grounded-radiants grow box-pos font" style="margin-left:800px;">kijk wat ik heb gemaakt sdggdfg<br><br>wow</div>
+
+<a class="slidebutton font buttonpos"  id="changeImg(-1)">&#10094;</a>
+<a class="slidebutton font buttonpos2" id="changeImg(1)">&#10095;</a>
+
+<button class="button font grow" style="margin-left:640px;" onClick="document.getElementById('intro_part').scrollIntoView();">Back to top</button>
+
+<div class="grounded-radiants2 grow box-pos" id="erv_part" style="margin-left:600px;margin-top:200px;font-family: Verdana;font-size:30px;">.  Toekomst  .</div>
+<div class="grounded-radiants2 grow box-pos font" style="margin-left:800px;">ik kan werken met asdohfghfgf<br><br>asdasdasdasdasdasdasd<br>adsfsdd</div>
+<div class="grounded-radiants2 grow box-pos font" style="margin-left:800px;">kijk wat ik heb gemaakt sdggdfg<br><br>wow</div>
+
+  <img src="images_test/background image.png" alt="bg_image" class="bg">
 </body>
 </head>

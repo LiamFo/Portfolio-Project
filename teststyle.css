@@ -6,19 +6,21 @@
 
 body {
     background: rgb(0,255,200);
-    /*background: linear-gradient(0deg, rgba(0,255,200,1) 25%, rgba(0,254,255,1) 50%, rgba(255,0,164,1) 75%);*/
-    background:rgb(35, 53, 61);
+    /* background: url(images_test/background\ image.png); */
+    background: linear-gradient(180deg, rgb(0,130,210) 0%, rgb(155,25,55) 100%);
+    /* background:rgb(35, 53, 61); */
     background-repeat:no-repeat;
     background-size: 100%;
     background-position:top;
 }
-.aaa{
-    width: 100%;
+.bg{
+    width: 90%;
     height: 2000px;
     display: block;
     position: relative;
     z-index: -2;
-    margin-top:-1250px;
+    margin-top:-1925px;
+    margin-left:80px;
   }
 
 html {
@@ -45,6 +47,27 @@ background: linear-gradient(rgb(138, 217, 243), rgb(215, 236, 243));
 content: '';
 z-index: -1;
 border-radius: 16px;
+}
+.grounded-radiants2 {
+  position: relative;
+  border: 4px solid transparent;
+  border-radius: 16px;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+  background-clip: padding-box;
+  padding: 10px;
+  box-shadow: 0 3px 9px black, inset 0 0 9px rgb(197, 196, 255);
+  width:fit-content;
+  height:fit-content;
+  }
+  
+  .grounded-radiants2::after {
+  position: absolute;
+  top: -4px; bottom: -4px;
+  left: -4px; right: -4px;
+  background: linear-gradient(rgb(145, 138, 243), rgb(215, 138, 243));
+  content: '';
+  z-index: -1;
+  border-radius: 16px;
 }
 
 .img_bord{
@@ -75,6 +98,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    margin-top:-8px;
   }
 
   li {
@@ -90,7 +114,7 @@ ul {
   li a {
     display: block;
     padding: 15px;
-    background-color: #140433;
+    background-color: #8b8c89;
     text-decoration: none;
     color:white;
   }
@@ -102,12 +126,12 @@ ul {
 
   .nav_bar{
       border: gray;
-      background-color: #140433;
+      background-color: #8b8c89;
   }
 
   button{
     position: relative;
-    border: 4px solid transparent;
+    border: 4px solid rgb(138, 217, 243);
     border-radius: 16px;
     background: rgb(138, 217, 243);
     background-clip: padding-box;
@@ -128,33 +152,8 @@ ul {
 }
 
 .slides{
-  width:300px;
+  width:500px;
   height:300px;
-}
-
-.taskbar{
-  position: relative;
-  border: 4px solid rgb(75, 75, 75);
-  background:white;
-  background-clip: padding-box;
-  padding: 10px;
-  box-shadow: 0 3px 9px black;
-  width:fit-content;
-  height:fit-content;
-  border-width: 23px 2px 2px;
-  border-radius: 0px;
-}
-
-.taskbar:hover{
-  border-color: rgb(100, 100, 100);
-}
-
-.taskbar_x{
-  font-size:17px;
-  color:white;
-  margin-left:100px;
-  margin-top:-75px;
-  background:rgb(75, 75, 75);
 }
 
 .slidebutton{
@@ -163,9 +162,29 @@ ul {
   border-radius: 3px;
   background: rgb(138, 217, 243);
   box-shadow: 0 3px 9px black, inset 0 0 9px white;
-  margin-top:150px;
 }
 
 .slidebutton:hover{
   background: rgb(112, 177, 199);
+}
+
+.slidepos{
+  margin-left:250px;
+  margin-top:350px;
+}
+
+.buttonpos{
+  margin-left:450px;
+  margin-top:80px;
+  display:block;
+  width:15px;
+  font-size: 25px;
+}
+
+.buttonpos2{
+  margin-left:525px;
+  margin-top:-43.5px;
+  display:block;
+  width:15px;
+  font-size: 25px;
 }
