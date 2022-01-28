@@ -5,7 +5,7 @@
 </head>
 <script>
 var i = 0;
-var images = ['images_test/colortest.png', 'images_test/colortest2.png','images_test/colortest3.png','images_test/colortest.png'];
+var images = ['images_test/photo_rps.png', 'images_test/photo_code.png','images_test/photo_hl.png','images_test/photo_rps.png'];
 
 document.addEventListener("click", function(event) { 
   if (i >= images.length - 1){
@@ -32,33 +32,39 @@ document.addEventListener("click", function(event) {
         <li><a href="#erv" onClick="document.getElementById('erv_part').scrollIntoView();">Ervaringen</a></li>
         <li><a href="#toe" onClick="document.getElementById('toekomst_part').scrollIntoView();">Toekomst</a></li>
         <li><a href="#cont" onClick="document.getElementById('contact_part').scrollIntoView();">Contact</a></li>
+        <li><a href="#menu" onClick="location.href='menu.html';">Terug Naar Menu</a></li>
       </ul>
 
 <div class="font">
-    <img class="img_bord grow box-pos" src="images_test/photo.png" style="margin-left:400px;width:225px;height:250px;">
-    <div class="grounded-radiants grow box-pos" style="margin-left:800px;margin-top:-270px;">Hallo, Mijn Naam is aaaa<br><br>Ik kom uit aaaa<br><br>en ik ben aaaa jaar oud</div>
-    <div class="grounded-radiants grow box-pos" style="margin-left:800px;margin-bottom:-300px;">Ik doe de opleiding aaaa<br><br></div>
-    <div class="grounded-radiants grow box-pos" style="margin-left:400px;margin-top:400px;">Geef een introductie over jezelf (naam, hobby, school, opleiding)<br>gebruik &#10094;br&#10095; in de code voor <br>ruimte tussen de lijnen<br></div>
-   <!-- <div id="contact_part" class="grounded-radiants grow" style="margin-left:100px">Contact Me!<br><br>E-Mail: thisisatest@gmail.com<br><br>Tele: +06 1234567890</div>-->
+    <img class="img_bord grow box-pos" src="images_test/photo_l.png" style="margin-left:400px;width:225px;height:250px;">
+    <div class="grounded-radiants grow box-pos" style="margin-left:800px;margin-top:-270px;">Hallo, Mijn Naam is Liam<br><br>Ik ben 16 jaar oud<br>en ik kom uit Lelystad<br><br></div>
+    <div class="grounded-radiants grow box-pos" style="margin-left:800px;margin-bottom:-300px;">Ik doe de opleiding <br>Software Development<br>aan ROC Flevoland in Almere Buiten<br><br></div>
+    <div class="grounded-radiants grow box-pos" style="margin-left:400px;margin-top:400px;">Ik heb de opleiding Software Development gekozen omdat ik creatief ben <br>en graag die creativiteit gebruiken om, bijvoorbeeld, games te maken. <br>Naast programeren maak ik mappen voor Half-Life in mijn vrije tijd.<br><br></div>
 </div>
 
 <div class="img_bord grow slidepos">
-  <img id= "slide" class="slides" src="images_test/colortest.png" width="200px" height="200px">
+  <img id= "slide" class="slides" src="images_test/photo_rps.png" width="200px" height="200px">
 </div>
 
 <div class="grounded-radiants grow box-pos" id="erv_part" style="margin-left:600px;margin-top:-435px;font-family: Verdana;font-size:30px;">.  Ervaringen  .</div>
-<div class="grounded-radiants grow box-pos font" style="margin-left:800px;">ik kan werken met asdohfghfgf<br><br>asdasdasdasdasdasdasd<br>adsfsdd</div>
-<div class="grounded-radiants grow box-pos font" style="margin-left:800px;">kijk wat ik heb gemaakt sdggdfg<br><br>wow</div>
+<div class="grounded-radiants grow box-pos font" style="margin-left:800px;">Ik heb ervaring met HTML, CSS, Java en Javscript<br>ik ben niet de beste met deze talen maar ik kan wel<br>programmas maken. Naast programeren gebruik ik<br>ook programmas zoals Aseprite en J.A.C.K editor.<br><br>In de slideshow hiernaast kunt U een paar<br>voorbeelden van mijn werk zien.<br><br></div>
+<div class="grounded-radiants grow box-pos font" style="margin-left:800px;">Ik heb ervaring met samenwerken,<br>bijvoorbeeld het maken van deze website.<br><br>De samenwerking voor dit project ging goed,<br>iedereen moest het leren, maar uiteindelijk ging<br>het samenwerken steeds beter waarbij<br>de eindresultaat deze website werd.<br><br></div>
 
-<a class="slidebutton font buttonpos"  id="changeImg(-1)">&#10094;</a>
-<a class="slidebutton font buttonpos2" id="changeImg(1)">&#10095;</a>
+<a class="slidebutton font buttonpos"  id="changeImg(-1)" style="margin-left:350px;margin-top:-100px;">&#10094;</a>
+<a class="slidebutton font buttonpos2" id="changeImg(1)" style="  margin-left:525px;margin-top:-43.5px;">&#10095;</a>
+<button class="button font grow" style="margin-left:640px;margin-top:150px;" onClick="document.getElementById('intro_part').scrollIntoView();">Back to top</button>
 
-<button class="button font grow" style="margin-left:640px;" onClick="document.getElementById('intro_part').scrollIntoView();">Back to top</button>
 
-<div class="grounded-radiants2 grow box-pos" id="erv_part" style="margin-left:600px;margin-top:200px;font-family: Verdana;font-size:30px;">.  Toekomst  .</div>
-<div class="grounded-radiants2 grow box-pos font" style="margin-left:800px;">ik kan werken met asdohfghfgf<br><br>asdasdasdasdasdasdasd<br>adsfsdd</div>
-<div class="grounded-radiants2 grow box-pos font" style="margin-left:800px;">kijk wat ik heb gemaakt sdggdfg<br><br>wow</div>
+<div class="grounded-radiants2 grow box-pos" id="toekomst_part" style="margin-left:600px;margin-top:200px;font-family: Verdana;font-size:30px;">.  Toekomst  .</div>
+<div class="grounded-radiants2 grow box-pos font" style="margin-left:380px;">In de toekomst wil graag goed worden met HTML, CSS, <br>Java, Javascript en meer en beginnen aan het werken van games.<br><br>Hierbij wil ik graag voor een bedrijf werken.<br><br><br></div>
 
-  <img src="images_test/background image.png" alt="bg_image" class="bg">
+<button class="button2 font grow" style="margin-left:640px;margin-top:50px;" onClick="document.getElementById('intro_part').scrollIntoView();">Back to top</button>
+
+  <div id="contact_part" class="grounded-radiants3 font grow" style="margin-left:550px;margin-top:100px;">Contact Me!<br><br>E-Mail: puppylilego@gmail.com<br><br>Tele: +06 25591932<br><br></div>
+  <img src="images_test/background image.png" alt="bg_image" style="margin-top:-2520px;" class="bg">
+
+  <ul class="nav_bar">
+    <div style= "height:150px;margin-top:-50px;"></div>
+    </ul>
 </body>
 </head>

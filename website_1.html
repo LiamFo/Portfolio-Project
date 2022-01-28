@@ -1,0 +1,70 @@
+<DOCTYPE html>
+    <html>
+    <head>
+        <link rel="stylesheet" href="teststyle.css">
+    </head>
+    <script>
+    var i = 0;
+    var images = ['images_test/photo_naam.png', 'images_test/photo_leeuw.png','images_test/photo_a.jpg','images_test/photo_naam.png'];
+    
+    document.addEventListener("click", function(event) { 
+      if (i >= images.length - 1){
+          i = 0;
+      }
+       if (i < 0){
+          i = images.length - 1;
+       }
+      if(event.target.id == "changeImg(-1)"){
+        i++;
+        document.getElementById("slide").src = images[i];
+        
+      }
+      if(event.target.id == "changeImg(1)"){
+        i++
+        document.getElementById("slide").src = images[i];
+      }
+    } ) 
+    
+    </script>
+    <body>
+        <ul class="nav_bar">
+            <li><a  id="intro_part" href="#intr" onClick="document.getElementById('intro_part').scrollIntoView();">Introductie</a></li>
+            <li><a href="#erv" onClick="document.getElementById('erv_part').scrollIntoView();">Ervaringen</a></li>
+            <li><a href="#toe" onClick="document.getElementById('toekomst_part').scrollIntoView();">Toekomst</a></li>
+            <li><a href="#cont" onClick="document.getElementById('contact_part').scrollIntoView();">Contact</a></li>
+            <li><a href="#menu" onClick="location.href='menu.html';">Terug Naar Menu</a></li>
+          </ul>
+    
+    <div class="font">
+        <img class="img_bord grow box-pos" src="images_test/photo_y.png" style="margin-left:400px;width:225px;height:250px;">
+        <div class="grounded-radiants grow box-pos" style="margin-left:800px;margin-top:-270px;">Hallo, Mijn Naam is Yomairo Scheuer<br><br>Ik ben 24 jaar oud<br>en ik kom uit Almere<br><br></div>
+        <div class="grounded-radiants grow box-pos" style="margin-left:800px;margin-bottom:-300px;">Ik doe de opleiding Media Vormgeving <br>aan ROC Flevoland in Almere Buiten<br><br></div>
+        <div class="grounded-radiants grow box-pos" style="margin-left:400px;margin-top:400px;">Ik houd van tekenen in Illustrator, tijd doorbrengen met familie <br>en vrienden, en op vakantie gaan<br><br></div>
+    </div>
+    
+    <div class="img_bord grow slidepos">
+      <img id= "slide" class="slides" src="images_test/photo_naam.png" width="200px" height="200px">
+    </div>
+    
+    <div class="grounded-radiants grow box-pos" id="erv_part" style="margin-left:600px;margin-top:-435px;font-family: Verdana;font-size:30px;">.  Ervaringen  .</div>
+    <div class="grounded-radiants grow box-pos font" style="margin-left:800px;">Ik heb het meeste ervaring in Illustrator en<br>tekenen op papier.<br><br>Momenteel leer ik verder nog werken op <br>alle andere Adobe apps.<br><br></div>
+    <div class="grounded-radiants grow box-pos font" style="margin-left:800px;">Ik heb ervaring met samenwerken,<br>bijvoorbeeld het maken van deze website.<br><br>De samenwerking voor dit project ging goed,<br>iedereen moest het leren, maar uiteindelijk ging<br>het samenwerken steeds beter waarbij<br>de eindresultaat deze website werd.<br><br></div>
+    
+    <a class="slidebutton font buttonpos"  id="changeImg(-1)" style="margin-left:350px;margin-top:-50px;">&#10094;</a>
+    <a class="slidebutton font buttonpos2" id="changeImg(1)" style="  margin-left:525px;margin-top:-43.5px;">&#10095;</a>
+    <button class="button font grow" style="margin-left:640px;margin-top:100px;" onClick="document.getElementById('intro_part').scrollIntoView();">Back to top</button>
+    
+    
+    <div class="grounded-radiants2 grow box-pos" id="toekomst_part" style="margin-left:600px;margin-top:200px;font-family: Verdana;font-size:30px;">.  Toekomst  .</div>
+    <div class="grounded-radiants2 grow box-pos font" style="margin-left:540px;">ik kan werken met asdohfghfgf<br><br>asdasdasdasdasdasdasd<br><br><br><br><br>adsfsdd</div>
+    
+    <button class="button2 font grow" style="margin-left:630px;margin-top:50px;" onClick="document.getElementById('intro_part').scrollIntoView();">Back to top</button>
+    
+      <div id="contact_part" class="grounded-radiants3 font grow" style="margin-left:530px;margin-top:150px;">Contact Me!<br><br>E-Mail: Yomairoscheuer@hotmail.com<br><br>Tele: +06 24366208<br><br></div>
+      <img src="images_test/background image.png" alt="bg_image" style="margin-top:-2450px;" class="bg">
+    
+      <ul class="nav_bar">
+        <div style= "height:150px;margin-top:-50px;"></div>
+        </ul>
+    </body>
+    </head>

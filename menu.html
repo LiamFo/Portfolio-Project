@@ -1,0 +1,44 @@
+<DOCTYPE html>
+    <html>
+    <head>
+        <link rel="stylesheet" href="teststyle.css">
+    </head>
+    <script>
+    var i = 0;
+    var images = ['images_test/colortest.png', 'images_test/colortest2.png','images_test/colortest3.png','images_test/colortest.png'];
+    
+    document.addEventListener("click", function(event) { 
+      if (i >= images.length - 1){
+          i = 0;
+      }
+       if (i < 0){
+          i = images.length - 1;
+       }
+      if(event.target.id == "changeImg(-1)"){
+        i++;
+        document.getElementById("slide").src = images[i];
+        
+      }
+      if(event.target.id == "changeImg(1)"){
+        i++
+        document.getElementById("slide").src = images[i];
+      }
+    } ) 
+    
+    </script>
+    <body>
+        <ul class="nav_bar">
+            <li><a>Kies het portfolio die U wilt bekijken</a></li>
+          </ul>
+    
+    <div class="font">
+        <img class="img_bord grow box-pos" src="images_test/photo_l.png" onClick="location.href = 'website.html';" style="margin-top:150px;margin-left:200px;width:225px;height:250px;cursor: pointer;">
+        <img class="img_bord grow box-pos" src="images_test/photo_c.png" onClick="location.href = 'website_2.html';" style="margin-top:150px;margin-left:600px;width:225px;height:250px;cursor: pointer;">
+        <img class="img_bord grow box-pos" src="images_test/photo_y.png" onClick="location.href = 'website_1.html';" style="margin-top:-275px;margin-left:625px;width:225px;height:250px;cursor: pointer;">
+
+        <div class="grounded-radiants box-pos" style="margin-left:250px;">Liam Foree</div>
+        <div class="grounded-radiants2 box-pos" style="margin-left:650px;margin-top:-50px;">Yomairo Scheuer</div>
+        <div class="grounded-radiants3 box-pos" style="margin-left:1070px;margin-top:-50px;">Chris Mastenbroek</div>
+    </div>
+    </body>
+    </head>
